@@ -15,7 +15,21 @@ public class Spawn : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Instantiate(objectToSpawn, spwanPonint, Quaternion.identity);
+            Instantiate(objectToSpawn, transform.position , Quaternion.identity);
+
+
         }
+ 
+    
+    
+    
+    
+    
+    
     }
+
+
+
 }
+
+

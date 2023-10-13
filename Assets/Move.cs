@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Move : MonoBehaviour
 {
-    private float speed = 1;
-    Vector3 direction = new Vector3(0, 0, 1);
+    public float speed = 10;
+    Vector3 direction = new Vector3(1, 0, 0);
     void Start()
     {
         
