@@ -12,7 +12,7 @@ public class Move : MonoBehaviour
     }
     void Update()
     {
-        transform.Translate(direction.normalized * speed * Time.deltaTime);
+        transform.Translate(Vector3.right.normalized * speed * Time.deltaTime);
     }
     
 }

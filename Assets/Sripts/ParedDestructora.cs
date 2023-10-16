@@ -2,12 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class pareddestructorA : MonoBehaviour
+public class ParedDestructora : MonoBehaviour
 {
 
     private void OnCollisionEnter(Collision collision)
     {
         Destroy(collision.gameObject);
-
     }
 }
