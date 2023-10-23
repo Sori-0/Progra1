@@ -5,7 +5,8 @@ using UnityEngine;
 public class Spawn : MonoBehaviour
 {
     public GameObject objectToSpawn;
-    public float speed; 
+    public float speed;
+    private int life = 3; 
     void Start()
     {
         
@@ -26,9 +27,10 @@ public class Spawn : MonoBehaviour
             transform.Translate(Vector3.down.normalized * speed * Time.deltaTime);
         }
     }
-
-
-
+    public void Life ()
+    {
+        life = life - 1;
+    }
 }
 
 
