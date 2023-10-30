@@ -6,7 +6,7 @@ using TMPro;
 public class Puntos : MonoBehaviour
 {
     private TMP_Text textComponent;
-    private int puntos; 
+    private int puntos;
     void Start()
     {
         textComponent = GetComponent<TMP_Text>();

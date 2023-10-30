@@ -23,7 +23,6 @@ public class MoveEnemy : MonoBehaviour
             spawnScript.Life();
         }
         puntosScript.AddPoints(0);
-        Destroy(collision.gameObject);
         Destroy(gameObject);
 
     }

@@ -1,15 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Spawn : MonoBehaviour
 {
     public GameObject objectToSpawn;
     public float speed;
-    private int life = 3; 
+    public int life = 3;
+
     void Start()
     {
-        
+       
     }
 
     void Update()
@@ -26,11 +28,17 @@ public class Spawn : MonoBehaviour
         {
             transform.Translate(Vector3.down.normalized * speed * Time.deltaTime);
         }
+        
     }
     public void Life ()
     {
         life = life - 1;
+        if (life == 0)
+        {
+            Destroy(gameObject);
+        }
     }
+    
 }
 
 
