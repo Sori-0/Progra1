@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Move : MonoBehaviour
+public class MoveSecond : MonoBehaviour
 {
     public float speed = 10;
 
@@ -10,17 +10,12 @@ public class Move : MonoBehaviour
     {
         
     }
+
+    // Update is called once per frame
     void Update()
     {
         transform.Translate(Vector3.left.normalized * speed * Time.deltaTime);
-        
-    }
-    void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Enemy")
-        {
-            Destroy(gameObject);
-        }
-    }
 
+    }
+ 
 }

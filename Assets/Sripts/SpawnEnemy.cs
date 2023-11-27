@@ -10,7 +10,7 @@ public class SpawnEnemy : MonoBehaviour
     public float max;
     void Update()
     {
-       
+   
         float num1 = Random.Range(min,max);
         Vector3 RandomPosition = new Vector3(-10, num1, 0);
         time -= Time.deltaTime;
@@ -19,7 +19,7 @@ public class SpawnEnemy : MonoBehaviour
         {
             Instantiate(Enemy, RandomPosition, Quaternion.identity);
             time = 1;
-            
+
         }
     }
 }
