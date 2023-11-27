@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1513404449737117965
+--- !u!1 &3086499920150333053
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,70 +8,66 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2066421150844251540}
-  - component: {fileID: 2995632023693056702}
-  - component: {fileID: 7309458997166951015}
-  - component: {fileID: 7948618137591828721}
-  - component: {fileID: 623985390989384280}
+  - component: {fileID: 3294388443085469223}
+  - component: {fileID: 2185465185191585579}
+  - component: {fileID: 2090518763711851210}
+  - component: {fileID: -1799189740517554843}
+  - component: {fileID: -1059163394168261841}
   m_Layer: 0
-  m_Name: Bullet
-  m_TagString: Bullet
+  m_Name: Enemy2
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2066421150844251540
+--- !u!4 &3294388443085469223
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1513404449737117965}
+  m_GameObject: {fileID: 3086499920150333053}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: -0.16873813, y: -0.16873813, z: -0.16873813}
+  m_LocalPosition: {x: -20.478718, y: 0.8311367, z: -2.1293468}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2995632023693056702
+--- !u!114 &2185465185191585579
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1513404449737117965}
+  m_GameObject: {fileID: 3086499920150333053}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37a94cdb829b97245a7909e73d63b1a9, type: 3}
+  m_Script: {fileID: 11500000, guid: 9c6910b34c6972745a71b8813e9b0f62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  enemylifeScript: {fileID: 0}
---- !u!54 &7309458997166951015
-Rigidbody:
+  enemyBullet: {fileID: 0}
+--- !u!65 &2090518763711851210
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1513404449737117965}
+  m_GameObject: {fileID: 3086499920150333053}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 124
-  m_CollisionDetection: 0
---- !u!212 &7948618137591828721
+  m_Size: {x: 7.9373302, y: 5.0714817, z: 1}
+  m_Center: {x: -0.06917477, y: 0.098822236, z: 0}
+--- !u!212 &-1799189740517554843
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1513404449737117965}
+  m_GameObject: {fileID: 3086499920150333053}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -106,27 +102,30 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: cb325c417c7c0284a840ab0a2f296544, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9b0208bc0547fda43959d2d6ee26376a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 8.35, y: 2.28}
+  m_Size: {x: 8, y: 5.33}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!65 &623985390989384280
-BoxCollider:
+--- !u!54 &-1059163394168261841
+Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1513404449737117965}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
+  m_GameObject: {fileID: 3086499920150333053}
   serializedVersion: 2
-  m_Size: {x: 8.350001, y: 2.2800002, z: 0.20000003}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0

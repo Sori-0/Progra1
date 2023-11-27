@@ -5,10 +5,11 @@ using UnityEngine;
 public class Move : MonoBehaviour
 {
     public float speed = 10;
+    private EnemyLife enemylifeScript;
 
     void Start()
     {
-        
+        enemylifeScript = GetComponent<EnemyLife>();
     }
     void Update()
     {
@@ -18,6 +19,15 @@ public class Move : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Enemy")
+        {
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+        }
+        if (collision.gameObject.tag == "Enemy1")
+        {
+            Destroy(gameObject);
+        }
+        if (collision.gameObject.tag == "Bullet")
         {
             Destroy(gameObject);
         }

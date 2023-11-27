@@ -21,9 +21,12 @@ public class MoveEnemy : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             spawnScript.Life();
+            Destroy(gameObject);
         }
-        puntosScript.AddPoints(0);
-        Destroy(gameObject);
+        if (collision.gameObject.tag == "Bullet")
+        {
+            puntosScript.AddPoints(0);
+        }
 
     }
 }

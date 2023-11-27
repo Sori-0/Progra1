@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class Puntos : MonoBehaviour
 {
     private TMP_Text textComponent;
-    private int puntos;
+    public int puntos;
     void Start()
     {
         textComponent = GetComponent<TMP_Text>();
@@ -20,7 +20,7 @@ public class Puntos : MonoBehaviour
     public void AddPoints (int value)
     {
         puntos = puntos + 1 + value;
-        if (puntos == 20)
+        if (puntos == 50)
         {
             SceneManager.LoadScene(3);
         }
